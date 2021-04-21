@@ -1,0 +1,17 @@
+{
+  "name": "My HN reader",
+  "action": {},
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "Turns all HN news link to point to hn.lincolnh0.com",
+  "permissions": [
+      "activeTab",
+      "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://hn.lincolnh0.com/*", "https://news.ycombinator.com/*"],
+      "js": ["replace.js"]
+    }
+  ]
+}
